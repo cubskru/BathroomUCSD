@@ -57,4 +57,3 @@ public class RoomInfo extends WindowController{
 
 	
 }
-
