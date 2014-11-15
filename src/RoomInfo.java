@@ -1,4 +1,5 @@
 import java.awt.*;
+import javax.swing.*;
 import objectdraw.*;
 
 public class RoomInfo extends WindowController{
@@ -29,13 +30,14 @@ public class RoomInfo extends WindowController{
 	}
 
 	public void run(){
+		Container contentPane = getContentPane();
 		topPanel = new JPanel(new BorderLayout());
 		Bathroom = new JLabel("Bathroom");
 		contentPane.add(topPanel, BorderLayout.NORTH);
 		topPanel.add(Bathroom, BorderLayout.NORTH);
 		
 		LocationPanel = new JPanel(new BorderLayout());
-		topPanel.add(Location, BorderLayout.SOUTH);
+		topPanel.add(LocationPanel, BorderLayout.SOUTH);
 		
 		/*College = new JLabel("College");
 		Building = new JLabel("Building");
@@ -46,7 +48,7 @@ public class RoomInfo extends WindowController{
 		LocationInfo = new JLabel(Room.getCollege() + "\n" + Room.getBuilding() + "\n"
 						+ Room.getLevel() + "\n");	
 		LocationPanel.add(LocationLabels, BorderLayout.WEST);
-		LocatonPanel.add(LocationInfo, BorderLayout.EAST);
+		LocationPanel.add(LocationInfo, BorderLayout.EAST);
 
 
 		
